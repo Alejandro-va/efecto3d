@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,6 +15,7 @@ body {
 }
 
 .box {
+ /*   border: 1px solid red; */
   width: 32%;
   display: flex;
   align-items: center;
@@ -26,15 +27,17 @@ body {
 }
 
 .the-force-box {
+   /* border: 1px solid red; */
   position: absolute;
   top: 0;
   left: -310px;
   display: flex;
-  /* pointer-events: none; */
+  pointer-events: none;/* le kito la funcion de elevar a todos los elementos dentro de box q le di en el js, ahora aunq le pase por encima a la plabra o la flecha no pasa nada */
 }
 
 .the-force-box p {
-  font: 2rem;
+ /*   border: 1px solid red; */
+  font-size: 2rem;
   color: #5a5757;
   text-transform: uppercase;
 }
@@ -54,7 +57,7 @@ body {
 }
 
 .card .card-character {
-  border: 1px solid red;
+/*   border: 1px solid red; */
   min-height: 35vh;
   display: flex;
   align-items: center;
@@ -62,7 +65,7 @@ body {
 }
 
 .card .card-character-bg {
-  border: 1px solid red;
+/*   border: 1px solid red; */
   width: 15rem;
   height: 15rem;
   background: linear-gradient(
@@ -74,4 +77,72 @@ body {
   border-radius: 50%;
   z-index: 1;
 }
-/* https://www.youtube.com/watch?v=8F3_hzopNic */
+
+.card-character .card-character-img{
+   width: 18rem;
+   z-index: 2;
+   transition: all .75s ease-out;
+}
+
+.card-info .card-info-title{
+   font-size: 3rem;
+   transition: all .75s ease-out;
+}
+
+.card-info .card-info-subtitle{
+   font-size: 1.3rem;
+   padding: 2rem 0;
+   color: #585858;
+   font-weight: lighter;
+   transition: all .75s ease-out;
+}
+
+.card-info .card-info-seasons{
+   display: flex;
+   justify-content: space-between;
+   transition: all .75s ease-out;
+}
+
+.card-info .card-info-seasons button{
+   padding: .5rem 2rem;
+   background: none;
+   border: none;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+   border-radius: 30px;
+   cursor: pointer;
+   font-weight: bold;
+   color: #585858;
+   transition: .3s all ease;
+}
+
+.card-info .card-info-seasons button:hover{
+   background: #585858;
+   color: #fff;
+}
+
+.card-info .card-info-seasons button.active{
+   background: #585858;
+   color: #fff;
+}
+
+.card-button{
+   margin-top: 5rem;
+   transition: all .75s ease-out;
+}
+
+.card-button button{
+   width: 100%;
+   padding: 1rem 0;
+   background: #8b5b20;
+   border: none;
+   color: #fff;
+   cursor: pointer;
+   border-radius: 30px;
+   font-weight: bold;
+   transition: .3s all ease;
+}
+
+.card-button button:hover{
+   background: #e59d36;
+   color: #585858;
+}
